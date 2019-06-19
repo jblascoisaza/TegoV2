@@ -1,4 +1,5 @@
 const { Client } = require('klasa');
+const { token } = require('../config.json');
 
 new Client({
   fetchAllMembers: false,
@@ -6,4 +7,4 @@ new Client({
   commandEditing: true,
   typing: true,
   readyMessage: client => `Successfully initialized. Ready to serve ${client.guilds.size} guilds.`
-}).login('NTkwODgwNTYzMjI1ODIxMjAx.XQoqbQ.18FNU4VRpj5Q5e_BusfHsvtpqR0');
+}).login(token);
